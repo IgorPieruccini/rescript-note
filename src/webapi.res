@@ -7,7 +7,12 @@ module Webapi = {
 
   module Document = {
     @val external document: Dom.document = "document"
-    @get external body: Dom.document => Dom.element = "body"
+    @get external _body: Dom.document => Dom.element = "body"
     @val external createElement: string => Dom.element = "document.createElement"
   }
 }
+
+open Webapi.Document
+  let body = {
+    document->_body
+  }
