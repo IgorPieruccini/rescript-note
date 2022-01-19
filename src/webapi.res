@@ -1,6 +1,7 @@
 module Webapi = { 
  module Element = {
     @set external setId: (Dom.element, string) => unit = "id"
+    @set external setInnerText: (Dom.element, string) => unit = "innerText"
     @send external appendChild: (Dom.element, Dom.element) => unit = "appendChild"
   }
 
